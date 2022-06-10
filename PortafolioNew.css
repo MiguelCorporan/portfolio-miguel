@@ -1,0 +1,774 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+overflow-x: hidden;
+}
+
+.Todo{
+
+}
+
+
+header{
+width: 100%;
+height: 3rem;  
+display: flex;
+justify-content: space-between;
+position: absolute;
+z-index: 2000;
+background-color: rgba(143, 143, 143, 0.253);
+
+}
+
+h1{
+
+}
+
+ nav{
+   width: 18%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+} 
+
+.MenuB{
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    fill: #fff;
+}
+
+.MenuX{
+    width: 70%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.None{
+    display: none;
+}
+
+.links{
+    position: absolute;
+    top: 20vh;
+    left: 20%;
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    width: 60%;
+    transform: scale(0);
+    transition: transform .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+.links a {
+    text-decoration: none;
+    margin-bottom: .7rem;
+    font-size: 1.5rem;
+}
+
+.active{
+    transform: scale(1);
+}
+
+.Modo{
+    width: 30%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/*-----PARTE QUE DALE DESDE LA IZQUIRDA EN EL MENU DE MOVIL ---------*/
+
+.Part{
+    width: 85%;
+    height: 100vh;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform ease-in-out .3s;
+}
+
+.Afuera{
+transform: translateX(0);
+}
+
+/*----------------------------------------*/
+
+/*------------------------------------------------------*/
+
+.Primero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+.mio{
+    width: 100%;
+    height:100%;
+    margin: 0 auto;
+    animation-name: mia;
+    animation-duration: 20s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 1000;
+}
+
+
+
+@keyframes mia {
+    0%,10% {background-image: url(/Fotos/P1.jpg);
+  background-size: 100% 100%;
+  
+ }
+ 11%,14%{opacity: 1;}
+  15%,25%{
+      background-image:url(/Fotos/P7.jpg) ;
+      background-size: 100% 100%;
+  }  
+  26%,29%{opacity:1 ;}
+  30%,40%{
+      background-image: url(/Fotos/Lp2.jpg);
+      background-size: 100% 100%;
+  }
+  41%,44%{opacity: 1;}
+  45%,55%{
+      background-image: url(/Fotos/P3.jpg);
+      background-size: 100% 100%;
+  }
+  56%,59%{opacity: 1;}
+  60%,70%{
+  background-image: url(/Fotos/P4.jpg);
+      background-size: 100% 100%;
+  }
+  71%,74%{opacity: 1;}
+  75%,85%{
+      background-image: url(/Fotos/P5.gif);
+      background-size: 100% 100%;
+  }
+  86%,89%{opacity: 1;}
+  90%,100%{
+      background-image: url(/Fotos/P6.png);
+      background-size: 100% 100%;
+     }
+
+}
+
+
+
+  .Entrada{
+     width: 100%;
+    margin-top: 20%; 
+    position: absolute;
+    z-index: 1500;
+    top:30vh;
+    left: 0;
+} 
+
+.Entrada div{
+  
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.242));
+}
+
+.Entrada .titulito{
+    font-size: 2rem;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+  
+}  
+
+
+/*.Entrada{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.Entrada .titulito{
+       position: absolute; 
+     z-index: 1500;
+     top: 43vh; 
+    font-size: 1.5rem;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+   
+} */
+
+
+/*-------VENTANA MODAL-----------*/
+
+.modal{
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(49, 49, 49, 0.384);
+    opacity: 0;
+    pointer-events: none;
+    transform: all 1s;
+    padding-top: 1rem;
+}
+
+.modal-conten{
+    position: relative;
+}
+
+.modal-close{
+    position: absolute;
+    right: .5rem;
+}
+
+.modal-close svg{
+    width: 3.5rem;
+    height: 3.5rem; 
+    padding: .8rem;
+    fill: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.Seve{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.elforn{
+    width: 25rem;
+    height: 30rem;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
+}
+
+/*--*/
+#recibe{
+    width: 80%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.name{
+  width: 80%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.712);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+} 
+
+.email{
+    width: 70%;
+    height: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.712);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+} 
+
+.area{
+  width: 55%;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.712);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.enviar{
+  width: 20%;
+  height: 1.5rem;
+  border-radius: 10px;
+  background-color: #000;
+  color: #eee;
+}
+
+
+
+/*-------------------SEGUNDO DIV-----------------------*/
+
+.Segundo{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    
+}
+
+.S2{
+    width: 100%;
+    height: 90%;
+}
+
+.Semueve{
+    height:3rem;
+    font-family: monospace; 
+}
+
+main{
+    width: 80%;
+    height: 47%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    
+}
+
+h3{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+main div {
+    width: 100%;
+    height: 70%;
+
+}
+
+main p {
+    width: 100%;
+    height: 1.5rem;
+    text-align: center;
+}
+
+.S2 article {
+    width: 100%;
+    height: 50%;
+}
+
+.Los3{
+    width:100% ;
+    height: 32%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Los2{
+    width: 85%;
+    height: 32%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Los1{
+    width: 73%;
+    height: 32%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Tegno{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.Tegno svg{
+    width: 90%;
+    height:80%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.Tegno p{
+    text-align: center;
+}
+
+.js{
+    color: rgb(238, 232, 48);
+}
+
+.html{
+    color: #DC4A25;
+}
+
+.css{
+    color: #146EB0;
+}
+
+.react{
+    color: #5ED3F3;
+}
+
+.node{
+    color: rgb(58, 120, 48);
+}
+
+.bus{
+    color: rgb(149, 46, 147);
+}
+
+.gi{
+    color: #d66d53;
+}
+
+
+
+/*-------------EL TERCER DIV DE CONTENIDO-------------------*/
+
+
+.Tercero{
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 7rem;
+}
+
+.Pro{
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 2px;
+}
+
+.DeP{
+    text-align: center;
+}
+
+
+.T3{
+    width: 100%;
+    height: 62%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Enlaces{
+    width: 100%;
+    height: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.Enlaces svg {
+    width: 20%;
+    height: 90%;
+}
+
+.Gii{
+    color: rgb(255, 255, 255);
+}
+
+.Vi{
+    color: rgb(255, 255, 255);
+}
+
+.Bonis{
+    width: 100%;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.Bonis svg {
+    width: 20%;
+    height: 100%;
+    align-items: center;
+}
+
+.More{
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+}
+
+.Lola{
+    margin-top: 1rem;
+    width: 100%;
+    height: 33%;
+    margin-bottom: 4rem;
+}
+
+/*-----------MORE PROYECT-----------*/
+
+.G-di{
+    width: 100%;
+    height: 80%;
+}
+
+.GD{
+    text-align: center;
+    text-decoration: none;
+}
+
+.G{
+    width: 100%;
+    height: 100%;
+}
+
+.viene{
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+}
+
+.pone{
+    display: none;
+}
+
+.img-G{
+    width: 100%;
+    height: 100%;
+}
+
+.G2{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+
+
+.G2 p{
+    height: 100%;
+    width: 80%;
+    color: rgb(255, 255, 255);
+}
+
+.G2 .Gii2 {
+    width: 10%;
+   height: 100%;
+   color: #fff;
+}
+
+.G2 .Vi2{
+width: 10%;
+height: 100%;
+color: #fff;
+}
+
+
+
+
+
+
+
+footer{
+    width: 100%;
+    height: 2rem;
+    border-top: 1px solid rgb(255, 255, 255);
+    margin-top: 5rem;
+}
+
+.FotP{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Fot{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Fot svg{
+    width: 100%;
+    height: 90%;
+    
+}
+
+/*----------------------------------*/
+/*----------------------------------------------*/
+/*-----------------------------------------------------------------*/
+
+
+@media screen and (min-width: 780px) {
+
+
+
+
+.S2{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+main{
+    width: 70%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.S2 article {
+    width: 80%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*-*/
+.T3{
+    height: 60%;
+}
+
+.Bonis{
+    margin-bottom: .1rem;
+}
+
+
+.FotP{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Entrada{
+   /*  width: 100%;
+    margin-top: 20%;  
+   position: absolute;
+   z-index: 1500;
+    top:0vh; 
+   left: 0; */
+   top: 0;
+} 
+
+/* .Entrada div{
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+  background-image:  linear-gradient(rgba(0, 0, 0, 0.226), rgba(0, 0, 0, 0.242));
+} */
+
+.Entrada .titulito{
+   font-size: 3rem;
+   /* text-align: center;
+   color: aliceblue;
+   font-family: 'Roboto', sans-serif; */
+}  
+
+.Tercero{
+    margin-bottom: 4rem;
+}
+
+
+
+
+}
+
+
+
+
+
+@media screen and (min-width: 1000px) {
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+}
+
+.links{
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    transform: scale(1);
+    /* top: 20vh;
+    left: 20%;
+    background-color: #fff;
+    height: 60vh;
+    width: 60%;
+    
+    transition: transform .2s ease-in-out; */
+}
+
+ h1{
+     margin-left: 2rem;
+ }
+
+ .Modo{
+     display: none;
+ }
+ 
+ nav{
+    background-color: rgba(121, 121, 121, 0.077);
+}
+ .Mn{
+     width: 100%;
+     display: flex;
+     color: rgb(0, 0, 0);
+ }
+
+ .Mn a{
+     font-size: 1.3rem;
+     text-decoration: none;
+     color: azure;
+     margin-right: .5rem;
+ }
+
+
+
+ .S2{
+     width: 65%;
+ }
+
+
+
+
+ .Fot{
+     justify-content: space-evenly;
+ }
+
+
+}
